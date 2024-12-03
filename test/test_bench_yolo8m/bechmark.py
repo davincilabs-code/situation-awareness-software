@@ -154,3 +154,7 @@ def main():
         print(f"TensorFlow Lite Float32 평균 메모리 사용량: {mean(tf_lite_32_memories[10:]) / 1024:.2f} KB")
     if onnx_memories:
         print(f"ONNX 평균 메모리 사용량: {mean(onnx_memories[10:]) / 1024:.2f} KB")
+    
+    # 벤치마크 그래프 저장
+    save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times, 
+                          tf_lite_16_memories, tf_lite_32_memories, onnx_memories)
