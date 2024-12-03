@@ -55,3 +55,5 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
     
     # 현재 프로세스 정보 가져오기
     process = psutil.Process(os.getpid())
+
+    if model_tf_lite_16:
