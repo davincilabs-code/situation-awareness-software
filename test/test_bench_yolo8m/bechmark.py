@@ -158,3 +158,41 @@ def main():
     # 벤치마크 그래프 저장
     save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times, 
                           tf_lite_16_memories, tf_lite_32_memories, onnx_memories)
+    
+if __name__ == "__main__":
+    main()
+
+# def main():
+#     # 이미지 파일 목록 생성
+#     image_folder = Path(dataset_path)
+#     image_paths = [str(p) for p in image_folder.glob("*.jpg")]
+    
+#     print("모델 로딩 중...")
+#     tf_lite_model_16, tf_lite_model_32, onnx_model = load_interpreters()
+    
+#     print("벤치마크 시작...")
+#     tf_lite_16_times, tf_lite_32_times, onnx_times, tf_lite_16_memories, tf_lite_32_memories, onnx_memories = benchmark_inference_extended(
+#         tf_lite_model_16, tf_lite_model_32, onnx_model, image_paths)
+    
+#     print("\n=== 벤치마크 결과 ===")
+#     # 성능 측정 출력 (시간)
+#     if tf_lite_16_times:
+#         print(f"TensorFlow Lite Float16 평균 추론 시간: {mean(tf_lite_16_times[10:]) * 1000:.2f}ms")
+#         print(f"TensorFlow Lite Float16 표준 편차: {stdev(tf_lite_16_times[10:]) * 1000:.2f}ms")
+#     if tf_lite_32_times:
+#         print(f"TensorFlow Lite Float32 평균 추론 시간: {mean(tf_lite_32_times[10:]) * 1000:.2f}ms")
+#         print(f"TensorFlow Lite Float32 표준 편차: {stdev(tf_lite_32_times[10:]) * 1000:.2f}ms")
+#     if onnx_times:
+#         print(f"ONNX 평균 추론 시간: {mean(onnx_times[10:]) * 1000:.2f}ms")
+#         print(f"ONNX 표준 편차: {stdev(onnx_times[10:]) * 1000:.2f}ms")
+    
+#     # 메모리 사용 출력
+#     if tf_lite_16_memories:
+#         print(f"TensorFlow Lite Float16 평균 메모리 사용량: {mean(tf_lite_16_memories[10:]) / 1024:.2f} KB")
+#     if tf_lite_32_memories:
+#         print(f"TensorFlow Lite Float32 평균 메모리 사용량: {mean(tf_lite_32_memories[10:]) / 1024:.2f} KB")
+#     if onnx_memories:
+#         print(f"ONNX 평균 메모리 사용량: {mean(onnx_memories[10:]) / 1024:.2f} KB")
+
+# if __name__ == "__main__":
+#     main()
