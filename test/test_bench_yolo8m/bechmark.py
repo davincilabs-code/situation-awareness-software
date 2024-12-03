@@ -79,3 +79,4 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
                 tf_lite_32_memories.append(memory_info.rss)
 
     if model_onnx:
+        input_name = model_onnx.get_inputs()[0].name
