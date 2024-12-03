@@ -80,3 +80,5 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
 
     if model_onnx:
         input_name = model_onnx.get_inputs()[0].name
+        for image_path in tqdm(image_paths, desc="ONNX"):
+            image = prepare_image_onnx(image_path)
