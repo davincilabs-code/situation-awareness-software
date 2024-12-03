@@ -1,8 +1,4 @@
 
-    
-#     print("벤치마크 시작...")
-#     tf_lite_times, onnx_times = benchmark_inference(tf_lite_model, onnx_model, image_paths)
-    
 #     # 결과 출력
 #     print("\n=== 벤치마크 결과 ===")
 #     print(f"TensorFlow Lite 평균 추론 시간: {np.mean(tf_lite_times[10:]) * 1000:.2f}ms")
