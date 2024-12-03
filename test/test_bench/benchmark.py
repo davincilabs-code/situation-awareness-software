@@ -36,10 +36,6 @@ def load_models():
 
     ort_sess = ort.InferenceSession(str(onnx_model_path))  # providers 매개변수 제거
 
-    # # CUDA를 우선적으로 사용
-    # providers = ['CUDAExecutionProvider', 'CPUExecutionProvider']
-
-
     # # ONNX 모델 로드
     # ort_sess = ort.InferenceSession(
     # str(onnx_model_path),
