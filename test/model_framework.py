@@ -61,6 +61,7 @@ class MyFramework:
                 providers = ["CUDAExecutionProvider"]
             else:
                 providers = ["CPUExecutionProvider"]
+            print("사용된 프로바이더:", self.session.get_providers())
             self.session = ort.InferenceSession(str(self.model_path), providers=providers)
             print("ONNX 모델 로드 완료.")
         else:
