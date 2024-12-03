@@ -135,10 +135,7 @@ def main():
 
     print("추론 벤치마크 시작...")
     times, memories = benchmark_inference(models, image_paths)
-
-    # print("mAP 계산 중...")
-    # maps = calculate_map(models, dataset_path)
-
+    
     print("\n=== 결과 ===")
     for model_name in models.keys():
         print(f"{model_name}:")
