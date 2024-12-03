@@ -96,7 +96,7 @@ class MyFramework:
         if self.model_type == "pytorch":
             with torch.no_grad():
                 if self.device.type == "cuda":
-                    input_data = input_data.to(torch.float16).to(self.device)  # GPU에서 실행 시 float16
+                    input_data = input_data.to(torch.float16).to(self.device)
                 else:
                     input_data = input_data.to(torch.float32).to(self.device)  # CPU에서 실행 시 float32
                 start_time = time.time()
