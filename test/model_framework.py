@@ -101,11 +101,11 @@ class MyFramework:
             with torch.no_grad():
                 # YOLOv8 모델은 기본적으로 float32를 사용
                 input_data = input_data.to(torch.float32).to(self.device)
-
-                start_time = time.time()
-                output = self.model(input_data)
                 print(f"모델 데이터 타입: {next(self.model.parameters()).dtype}")
                 print(f"입력 데이터 타입: {input_data.dtype}")
+                start_time = time.time()
+                output = self.model(input_data)
+
                 inference_time = (time.time() - start_time) * 1000  # ms
                 print(f"PyTorch 추론 완료! 소요 시간: {inference_time:.2f} ms")
                 if isinstance(output, (tuple, list)):
