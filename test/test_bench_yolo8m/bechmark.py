@@ -46,3 +46,4 @@ def prepare_image_onnx(image_path, input_size=(640, 640)):
     img = np.array(img, dtype=np.float32) / 255.0  # 정규화 (H, W, C)
     img = np.transpose(img, (2, 0, 1))           # (H, W, C) -> (C, H, W)
     img = np.expand_dims(img, axis=0) 
+    return img
