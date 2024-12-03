@@ -90,3 +90,7 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
                 onnx_memories.append(memory_info.rss)
     
     return tf_lite_16_times, tf_lite_32_times, onnx_times, tf_lite_16_memories, tf_lite_32_memories, onnx_memories
+
+def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times, 
+                          tf_lite_16_memories, tf_lite_32_memories, onnx_memories):
+    model_names = ["TFLite Float16", "TFLite Float32", "ONNX"]
