@@ -96,22 +96,6 @@ def benchmark_inference(models, image_paths, num_iterations=1):
 
     return times, memories
 
-# def calculate_map(models, dataset_path):
-#     """각 모델에 대한 mAP 계산."""
-#     maps = {}
-#     for model_name, model in models.items():
-#         if model_name == "YOLOv8 (.pt)":
-#             print(f"Calculating mAP for {model_name}...")
-#             results = model.val(data=dataset_path)
-#             maps[model_name] = (results.box.map50, results.box.map)
-#         else:
-#             # TFLite 및 ONNX의 mAP 측정을 위해서는 맞춤 구현 필요
-#             # 추론 결과를 기반으로 직접 계산하는 로직 추가
-#             print(f"mAP calculation not directly supported for {model_name}.")
-#             maps[model_name] = (None, None)
-
-#     return maps
-
 def save_benchmark_results(times, memories):
     """추론 속도, 메모리 사용량 및 mAP 점수 저장."""
     model_names = list(times.keys())
