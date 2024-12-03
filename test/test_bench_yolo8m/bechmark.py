@@ -57,3 +57,5 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
     process = psutil.Process(os.getpid())
 
     if model_tf_lite_16:
+        for image_path in tqdm(image_paths, desc="TensorFlow Lite Float16"):
+            image = prepare_image_tflite(image_path)
