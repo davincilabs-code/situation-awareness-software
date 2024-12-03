@@ -1,16 +1,3 @@
-# import time
-# import os
-# import numpy as np
-# import onnxruntime as ort
-# import tensorflow as tf
-# from pathlib import Path
-# from tqdm import tqdm
-# from PIL import Image
-# import tracemalloc  # 메모리 추적
-# from statistics import mean, stdev
-# import matplotlib.pyplot as plt
-# import psutil
-
 # # 모델 경로 설정
 # save_dir = Path("/home/jetson/Downloads/yolov/yolov8n/yolov8n_saved_model/")
 # tflite_float16_path = save_dir / "yolov8n_float16.tflite"
