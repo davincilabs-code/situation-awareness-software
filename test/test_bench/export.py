@@ -1,8 +1,3 @@
-# def load_models(model_path):
-#     """TensorFlow Lite와 ONNX 모델을 로드합니다."""
-#     # TensorFlow Lite 모델 로드
-#     tf_lite_model = YOLO(model_path)
-#     tf_lite_model.export(format='tflite')
     
 #     # tflite 파일 경로 설정 및 확인
 #     tflite_path = Path(model_path).with_suffix('.tflite')
