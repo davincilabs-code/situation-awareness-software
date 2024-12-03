@@ -142,21 +142,25 @@ class MyFramework:
         else:
             raise ValueError("추론을 지원하지 않는 모델 타입입니다.")
 
-
+import time
 # 사용 예시
 if __name__ == "__main__":
     print("\n=== PyTorch 모델 ===")
     model = MyFramework("test.pt")
     output_pt = model.predict("test.jpg", input_size=(640, 640))
+    time.sleep(1)  # 모델 로드 후 대기
 
     print("\n=== TensorFlow Lite Float16 모델 ===")
     model = MyFramework("test_float16.tflite")
     output_tflite16 = model.predict("test.jpg", input_size=(640, 640))
+    time.sleep(1)  # 모델 로드 후 대기
 
     print("\n=== TensorFlow Lite Float32 모델 ===")
     model = MyFramework("test_float32.tflite")
     output_tflite32 = model.predict("test.jpg", input_size=(640, 640))
+    time.sleep(1)  # 모델 로드 후 대기
 
     print("\n=== ONNX 모델 ===")
     model = MyFramework("test.onnx")
     output_onnx = model.predict("test.jpg", input_size=(640, 640))
+    time.sleep(1)  # 모델 로드 후 대기
