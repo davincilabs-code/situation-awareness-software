@@ -109,3 +109,4 @@ def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times,
 
     plt.legend(bars, model_names, loc='center right', title="Model Type")
     plt.savefig("inference_time_benchmark.png")
+    plt.close()
