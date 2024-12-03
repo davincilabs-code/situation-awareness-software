@@ -1,12 +1,4 @@
-# def prepare_image_tflite(image_path, input_size=(640, 640)):
-#     """TensorFlow Lite 모델 입력 형식으로 이미지를 준비합니다."""
-#     img = Image.open(image_path).convert('RGB')  # 이미지가 RGB로 변환되었는지 확인
-#     img = img.resize(input_size)                 # 모델 입력 크기로 리사이즈
-#     img = np.array(img, dtype=np.float32) / 255.0  # 정규화하여 (height, width, channels)로 변환
-#     img = np.expand_dims(img, axis=0)            # (1, 640, 640, 3) 형태로 만듦
-#     return img
-
-# def prepare_image_onnx(image_path, input_size=(640, 640)):
+ def prepare_image_onnx(image_path, input_size=(640, 640)):
 #     """ONNX 모델 입력 형식으로 이미지를 준비합니다."""
 #     img = Image.open(image_path).convert('RGB')  # 항상 RGB로 변환하여 3채널을 보장
 #     img = img.resize(input_size)                 # 모델 입력 크기로 리사이즈
