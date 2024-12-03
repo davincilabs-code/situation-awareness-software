@@ -1,11 +1,3 @@
-# def prepare_image(image_path, input_size=(640, 640)):
-#     """이미지를 전처리합니다."""
-#     img = Image.open(image_path)
-#     img = img.resize(input_size)
-#     img = np.array(img) / 255.0
-#     img = np.expand_dims(img, axis=0).astype(np.float32)
-#     return img
-
 # def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=100):
 #     """추론 성능을 벤치마크합니다."""
 #     # TensorFlow Lite 벤치마크
