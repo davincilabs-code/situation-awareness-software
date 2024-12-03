@@ -20,8 +20,8 @@ class MyFramework:
         self.session = None
         self.model_type = None
         self.device = torch.device(device if torch.cuda.is_available() else "cpu") if device == "cuda" else torch.device("cpu")
-        self.load_model()  # 생성 시 자동으로 모델 로드
-
+        self.load_model()
+        
     def load_model(self):
         """
         파일 확장자를 기반으로 모델 로드.
