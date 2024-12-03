@@ -1,7 +1,4 @@
     
-#     print("벤치마크 시작...")
-#     tf_lite_times, onnx_times = benchmark_inference(tf_lite_model, onnx_model, image_paths)
-    
 #     # 결과 출력
 #     print("\n=== 벤치마크 결과 ===")
 #     if tf_lite_times:
