@@ -98,7 +98,7 @@ class MyFramework:
                 if self.device.type == "cuda":
                     input_data = input_data.to(torch.float16).to(self.device)
                 else:
-                    input_data = input_data.to(torch.float32).to(self.device)  # CPU에서 실행 시 float32
+                    input_data = input_data.to(torch.float32).to(self.device)
                 start_time = time.time()
                 output = self.model(input_data)
                 inference_time = (time.time() - start_time) * 1000  # ms
