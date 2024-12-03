@@ -34,3 +34,4 @@ def load_interpreters():
     return tf_lite_interpreter_16, tf_lite_interpreter_32, ort_sess
 
 def prepare_image_tflite(image_path, input_size=(640, 640)):
+    img = Image.open(image_path).convert('RGB')  # 이미지가 RGB로 변환되었는지 확인
