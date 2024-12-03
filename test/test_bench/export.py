@@ -1,6 +1,4 @@
 
-# download_and_extract(dataset_url, dataset_path)
-
 # # 모델 경로 설정 (YOLOv8n.pt 파일의 경로로 변경하세요)
 # model_path = "yolov8n.pt"
 
