@@ -1,8 +1,3 @@
-
-# if __name__ == "__main__":
-#     main()
-
-
 # import time
 # import os
 # import numpy as np
