@@ -1,20 +1,3 @@
-
-
-# def load_interpreters():
-#     """TensorFlow Lite와 ONNX 모델을 로드합니다."""
-#     # TFLite Interpreter 설정 (float16 및 float32)
-#     tf_lite_interpreter_16 = tf.lite.Interpreter(model_path=str(tflite_float16_path))
-#     tf_lite_interpreter_16.allocate_tensors()
-    
-#     tf_lite_interpreter_32 = tf.lite.Interpreter(model_path=str(tflite_float32_path))
-#     tf_lite_interpreter_32.allocate_tensors()
-    
-#     # ONNX Inference Session 설정 (CPU 사용)
-#     ort_sess = ort.InferenceSession(str(onnx_model_path))  # providers 매개변수 제거
-#     # ort_sess = ort.InferenceSession(str(onnx_model_path), providers=['CUDAExecutionProvider'])
-    
-#     return tf_lite_interpreter_16, tf_lite_interpreter_32, ort_sess
-
 # def prepare_image_tflite(image_path, input_size=(640, 640)):
 #     """TensorFlow Lite 모델 입력 형식으로 이미지를 준비합니다."""
 #     img = Image.open(image_path).convert('RGB')  # 이미지가 RGB로 변환되었는지 확인
