@@ -118,14 +118,6 @@ def save_benchmark_results(times, memories):
     plt.savefig("memory_usage.png")
     plt.close()
 
-    # # mAP 점수 그래프
-    # plt.figure(figsize=(10, 6))
-    # plt.bar(model_names, map_scores, color=['blue', 'orange', 'green', 'red'])
-    # plt.title("mAP50 Scores")
-    # plt.ylabel("mAP50")
-    # plt.savefig("map_scores.png")
-    # plt.close()
-
 def main():
     print("모델 로드 중...")
     yolo_model, tf_lite_16, tf_lite_32, onnx_model = load_models()
