@@ -37,3 +37,4 @@ def prepare_image_tflite(image_path, input_size=(640, 640)):
     img = Image.open(image_path).convert('RGB')  # 이미지가 RGB로 변환되었는지 확인
     img = img.resize(input_size)    
     img = np.array(img, dtype=np.float32) / 255.0
+    img = np.expand_dims(img, axis=0)  
