@@ -1,14 +1,3 @@
-# import time
-# import os
-# import numpy as np
-# from ultralytics import YOLO
-# import tensorflow as tf
-# import onnxruntime as ort
-# from pathlib import Path
-# from tqdm import tqdm
-# from PIL import Image
-# import requests
-# import zipfile
 
 # # 데이터셋 다운로드 및 경로 설정
 # dataset_url = "https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip"
