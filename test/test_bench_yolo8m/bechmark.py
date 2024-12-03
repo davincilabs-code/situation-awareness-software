@@ -28,3 +28,5 @@ def load_interpreters():
 
     tf_lite_interpreter_32 = tf.lite.Interpreter(model_path=str(tflite_float32_path))
     tf_lite_interpreter_32.allocate_tensors()
+
+    ort_sess = ort.InferenceSession(str(onnx_model_path))
