@@ -25,3 +25,6 @@ def load_interpreters():
     # TFLite Interpreter 설정 (float16 및 float32)
     tf_lite_interpreter_16 = tf.lite.Interpreter(model_path=str(tflite_float16_path))
     tf_lite_interpreter_16.allocate_tensors()
+
+    tf_lite_interpreter_32 = tf.lite.Interpreter(model_path=str(tflite_float32_path))
+    tf_lite_interpreter_32.allocate_tensors()
