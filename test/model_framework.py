@@ -21,7 +21,7 @@ class MyFramework:
         self.model_type = None
         self.device = torch.device(device if torch.cuda.is_available() else "cpu") if device == "cuda" else torch.device("cpu")
         self.load_model()
-        
+
     def load_model(self):
         """
         파일 확장자를 기반으로 모델 로드.
@@ -32,7 +32,6 @@ class MyFramework:
             self.model_type = "pytorch"
             print("PyTorch 모델 로드 중...")
             checkpoint = torch.load(self.model_path, map_location=self.device)
-            # print("체크포인트 키:", checkpoint.keys())
             self.model = checkpoint['model'].to(self.device)  # 모델 객체 디바이스로 이동
             self.model.eval()
             print("PyTorch 모델 로드 완료.")
