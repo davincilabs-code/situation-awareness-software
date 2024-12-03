@@ -97,11 +97,10 @@ def benchmark_inference(models, image_paths, num_iterations=1):
     return times, memories
 
 def save_benchmark_results(times, memories):
-    """추론 속도, 메모리 사용량 및 mAP 점수 저장."""
+    """추론 속도, 메모리 사용량 점수 저장."""
     model_names = list(times.keys())
     avg_times = [mean(times[model_name]) * 1000 for model_name in model_names]
     avg_memories = [mean(memories[model_name]) / 1024 for model_name in model_names]
-    # map_scores = [maps[model_name][0] if maps[model_name][0] else 0 for model_name in model_names]
 
     # 추론 시간 그래프
     plt.figure(figsize=(10, 6))
