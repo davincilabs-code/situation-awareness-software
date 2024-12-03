@@ -113,3 +113,5 @@ def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times,
 
     plt.figure(figsize=(10, 6))
     bars = plt.bar(model_names, avg_memories, color=colors)
+    plt.ylabel("Average Memory Usage (KB)")
+    plt.title("Benchmark: Average Memory Usage")
