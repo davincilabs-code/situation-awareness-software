@@ -32,7 +32,7 @@ class MyFramework:
             self.model_type = "pytorch"
             print("PyTorch 모델 로드 중...")
             checkpoint = torch.load(self.model_path, map_location=self.device)
-            self.model = checkpoint['model'].to(self.device)  # 모델 객체 디바이스로 이동
+            self.model = checkpoint['model'].to(self.device)
             self.model.eval()
             print("PyTorch 모델 로드 완료.")
 
