@@ -70,3 +70,4 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
     if model_tf_lite_32:
         for image_path in tqdm(image_paths, desc="TensorFlow Lite Float32"):
             image = prepare_image_tflite(image_path)
+            for _ in range(num_iterations):
