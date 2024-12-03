@@ -1,13 +1,3 @@
-
-# # 다운로드와 압축 해제를 파이썬 코드로 대체
-# def download_and_extract(url, dest_path):
-#     zip_path = "coco128.zip"
-#     # 파일 다운로드
-#     if not os.path.exists(dest_path):
-#         print("Downloading dataset...")
-#         response = requests.get(url)
-#         with open(zip_path, "wb") as f:
-#             f.write(response.content)
 #         # 압축 해제
 #         print("Extracting dataset...")
 #         with zipfile.ZipFile(zip_path, "r") as zip_ref:
