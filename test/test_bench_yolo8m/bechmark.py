@@ -20,3 +20,5 @@ onnx_model_path = "yolov8m.onnx"
 
 # 데이터셋 경로 설정
 dataset_path = "coco128/images/train2017"
+
+def load_interpreters():
