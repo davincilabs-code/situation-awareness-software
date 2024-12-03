@@ -1,7 +1,3 @@
-
-#     if tf_lite_32_times:
-#         print(f"TensorFlow Lite Float32 평균 추론 시간: {mean(tf_lite_32_times[10:]) * 1000:.2f}ms")
-#         print(f"TensorFlow Lite Float32 표준 편차: {stdev(tf_lite_32_times[10:]) * 1000:.2f}ms")
 #     if onnx_times:
 #         print(f"ONNX 평균 추론 시간: {mean(onnx_times[10:]) * 1000:.2f}ms")
 #         print(f"ONNX 표준 편차: {stdev(onnx_times[10:]) * 1000:.2f}ms")
