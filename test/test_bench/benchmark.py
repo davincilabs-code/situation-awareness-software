@@ -1,11 +1,3 @@
-#     # 추론 시간 그래프
-#     plt.figure(figsize=(10, 6))
-#     bars = plt.bar(model_names, avg_times, yerr=std_times, capsize=5, color=colors)
-#     plt.ylabel("Average Inference Time (ms)")
-#     plt.title("Benchmark: Average Inference Time")
-#     for i, v in enumerate(avg_times):
-#         plt.text(i, v + 5, f"{v:.2f} ms", ha='center', fontweight='bold')  # 각 막대 위에 값 라벨 추가
-
 #     # 범례를 오른쪽 중앙에 추가
 #     plt.legend(bars, model_names, loc='center right', title="Model Type")
 #     plt.savefig("inference_time_benchmark.png")
