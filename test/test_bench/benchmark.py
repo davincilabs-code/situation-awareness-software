@@ -1,16 +1,4 @@
-#     # ONNX 모델
-#     if model_onnx:
-#         input_name = model_onnx.get_inputs()[0].name
-#         for image_path in tqdm(image_paths, desc="ONNX"):
-#             image = prepare_image_onnx(image_path)
-#             for _ in range(num_iterations):
-#                 start_time = time.perf_counter()
-#                 model_onnx.run(None, {input_name: image})
-#                 onnx_times.append(time.perf_counter() - start_time)
-#                 # 메모리 사용 측정
-#                 memory_info = process.memory_info()
-#                 onnx_memories.append(memory_info.rss)
-    
+   
 #     return tf_lite_16_times, tf_lite_32_times, onnx_times, tf_lite_16_memories, tf_lite_32_memories, onnx_memories
 
 # def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times, 
