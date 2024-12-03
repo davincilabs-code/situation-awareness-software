@@ -135,16 +135,12 @@ def main():
 
     print("추론 벤치마크 시작...")
     times, memories = benchmark_inference(models, image_paths)
-    
+
     print("\n=== 결과 ===")
     for model_name in models.keys():
         print(f"{model_name}:")
         print(f"  - 평균 추론 시간: {mean(times[model_name]) * 1000:.2f} ms")
         print(f"  - 평균 메모리 사용량: {mean(memories[model_name]) / 1024:.2f} KB")
-        # if maps[model_name][0]:
-        #     print(f"  - mAP50: {maps[model_name][0]:.4f}, mAP50-95: {maps[model_name][1]:.4f}")
-        # else:
-        #     print(f"  - mAP: 지원되지 않음")
 
     save_benchmark_results(times, memories)
 
