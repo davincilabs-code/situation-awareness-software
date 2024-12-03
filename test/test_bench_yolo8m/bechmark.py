@@ -131,3 +131,7 @@ def main():
 
     print("모델 로딩 중...")
     tf_lite_model_16, tf_lite_model_32, onnx_model = load_interpreters()
+
+    print("벤치마크 시작...")
+    tf_lite_16_times, tf_lite_32_times, onnx_times, tf_lite_16_memories, tf_lite_32_memories, onnx_memories = benchmark_inference_extended(
+        tf_lite_model_16, tf_lite_model_32, onnx_model, image_paths)
