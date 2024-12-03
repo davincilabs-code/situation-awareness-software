@@ -1,10 +1,4 @@
-     # 메모리 사용량 그래프
-#     plt.figure(figsize=(10, 6))
-#     bars = plt.bar(model_names, avg_memories, color=colors)
-#     plt.ylabel("Average Memory Usage (KB)")
-#     plt.title("Benchmark: Average Memory Usage")
-#     for i, v in enumerate(avg_memories):
-#         plt.text(i, v + 5, f"{v:.2f} KB", ha='center', fontweight='bold')  # 각 막대 위에 값 라벨 추가
+
 
 #     # 범례를 오른쪽 중앙에 추가
 #     plt.legend(bars, model_names, loc='center right', title="Model Type")
