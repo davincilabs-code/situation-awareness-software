@@ -1,7 +1,3 @@
-#     if onnx_times:
-#         print(f"ONNX 평균 추론 시간: {mean(onnx_times[10:]) * 1000:.2f}ms")
-#         print(f"ONNX 표준 편차: {stdev(onnx_times[10:]) * 1000:.2f}ms")
-    
 #     # 메모리 사용 출력
 #     if tf_lite_16_memories:
 #         print(f"TensorFlow Lite Float16 평균 메모리 사용량: {mean(tf_lite_16_memories[10:]) / 1024:.2f} KB")
