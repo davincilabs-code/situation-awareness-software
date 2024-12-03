@@ -66,7 +66,7 @@ class MyFramework:
         :param image_path: 입력 이미지 경로
         :param input_size: 모델 입력 크기 (width, height)
         """
-        print(f"모델 타입: {self.model_type}")  # 디버깅용 출력
+        print(f"모델 타입: {self.model_type}")
         img = Image.open(image_path).convert('RGB')
         img = img.resize(input_size)
         img_array = np.array(img, dtype=np.float32) / 255.0
