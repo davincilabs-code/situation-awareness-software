@@ -73,7 +73,7 @@ class MyFramework:
         if self.model_type == "pytorch":
             img_array = np.transpose(img_array, (2, 0, 1))  # (H, W, C) -> (C, H, W)
             img_tensor = torch.tensor(img_array, dtype=torch.float32).unsqueeze(0)  # (1, C, H, W)
-            return img_tensor.to(self.device)  # 디바이스로 이동
+            return img_tensor.to(self.device)
 
         elif self.model_type == "tensorflow":
             img_array = np.expand_dims(img_array, axis=0)  # (H, W, C) -> (1, H, W, C)
