@@ -72,3 +72,5 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
             image = prepare_image_tflite(image_path)
             for _ in range(num_iterations):
                 start_time = time.perf_counter()
+                model_tf_lite_32.set_tensor(model_tf_lite_32.get_input_details()[0]['index'], image)
+                model_tf_lite_32.invoke()
