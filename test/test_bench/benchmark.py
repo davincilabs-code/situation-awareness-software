@@ -1,6 +1,3 @@
-
-#     colors = ['skyblue', 'salmon', 'lightgreen']  # 색상 정의
-
 #     # 추론 시간 그래프
 #     plt.figure(figsize=(10, 6))
 #     bars = plt.bar(model_names, avg_times, yerr=std_times, capsize=5, color=colors)
