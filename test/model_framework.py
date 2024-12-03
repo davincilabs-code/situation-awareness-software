@@ -7,6 +7,12 @@ import torch
 import torch.nn as nn
 from pathlib import Path
 from PIL import Image
+import logging
+
+# TensorFlow 디버그 및 정보 메시지 억제
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # 0 = 모든 로그, 1 = INFO, 2 = WARNING, 3 = ERROR
+tf.get_logger().setLevel("ERROR")
+logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 class MyFramework:
     def __init__(self, model_path, device="cpu"):
@@ -20,7 +26,7 @@ class MyFramework:
         self.session = None
         self.model_type = None
         self.device = torch.device(device if torch.cuda.is_available() else "cpu") if device == "cuda" else torch.device("cpu")
-        self.load_model()
+        self.load_model()  # 생성 시 자동으로 모델 로드
 
     def load_model(self):
         """
@@ -32,7 +38,8 @@ class MyFramework:
             self.model_type = "pytorch"
             print("PyTorch 모델 로드 중...")
             checkpoint = torch.load(self.model_path, map_location=self.device)
-            self.model = checkpoint['model'].to(self.device)
+            # print("체크포인트 키:", checkpoint.keys())
+            self.model = checkpoint['model'].to(self.device)  # 모델 객체 디바이스로 이동
             self.model.eval()
             print("PyTorch 모델 로드 완료.")
 
@@ -128,7 +135,7 @@ class MyFramework:
 # 사용 예시
 if __name__ == "__main__":
     print("\n=== PyTorch 모델 ===")
-    model = MyFramework("test.pt", device="cuda")
+    model = MyFramework("test.pt")
     output_pt = model.predict("test.jpg", input_size=(640, 640))
 
     print("\n=== TensorFlow Lite Float16 모델 ===")
@@ -140,5 +147,5 @@ if __name__ == "__main__":
     output_tflite32 = model.predict("test.jpg", input_size=(640, 640))
 
     print("\n=== ONNX 모델 ===")
-    model = MyFramework("test.onnx", device="cuda")
+    model = MyFramework("test.onnx")
     output_onnx = model.predict("test.jpg", input_size=(640, 640))
