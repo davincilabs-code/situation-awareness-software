@@ -1,16 +1,3 @@
-#     # TensorFlow Lite Float32 모델
-#     if model_tf_lite_32:
-#         for image_path in tqdm(image_paths, desc="TensorFlow Lite Float32"):
-#             image = prepare_image_tflite(image_path)
-#             for _ in range(num_iterations):
-#                 start_time = time.perf_counter()
-#                 model_tf_lite_32.set_tensor(model_tf_lite_32.get_input_details()[0]['index'], image)
-#                 model_tf_lite_32.invoke()
-#                 tf_lite_32_times.append(time.perf_counter() - start_time)
-#                 # 메모리 사용 측정
-#                 memory_info = process.memory_info()
-#                 tf_lite_32_memories.append(memory_info.rss)
-
 #     # ONNX 모델
 #     if model_onnx:
 #         input_name = model_onnx.get_inputs()[0].name
