@@ -137,3 +137,7 @@ def main():
         tf_lite_model_16, tf_lite_model_32, onnx_model, image_paths)
     
     print("\n=== 벤치마크 결과 ===")
+
+    if tf_lite_16_times:
+        print(f"TensorFlow Lite Float16 평균 추론 시간: {mean(tf_lite_16_times[10:]) * 1000:.2f}ms")
+        print(f"TensorFlow Lite Float16 표준 편차: {stdev(tf_lite_16_times[10:]) * 1000:.2f}ms")
