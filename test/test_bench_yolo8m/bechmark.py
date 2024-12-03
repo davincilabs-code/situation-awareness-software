@@ -10,3 +10,9 @@ import tracemalloc  # 메모리 추적
 from statistics import mean, stdev
 import matplotlib.pyplot as plt
 import psutil
+
+# 모델 경로 설정
+save_dir = Path(r"/home/jetson/Downloads/yolov/yolov8m/yolov8m_saved_model/")
+tflite_float16_path = save_dir / "yolov8m_float16.tflite"
+tflite_float32_path = save_dir / "yolov8m_float32.tflite"
+onnx_model_path = "yolov8m.onnx"
