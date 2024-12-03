@@ -7,12 +7,6 @@ import torch
 import torch.nn as nn
 from pathlib import Path
 from PIL import Image
-import logging
-
-# TensorFlow 디버그 및 정보 메시지 억제
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # 0 = 모든 로그, 1 = INFO, 2 = WARNING, 3 = ERROR
-tf.get_logger().setLevel("ERROR")
-logging.getLogger("tensorflow").setLevel(logging.ERROR)
 
 class MyFramework:
     def __init__(self, model_path, device="cpu"):
