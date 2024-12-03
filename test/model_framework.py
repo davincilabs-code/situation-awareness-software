@@ -88,7 +88,7 @@ class MyFramework:
             return img_array.astype(np.float32)  # 데이터 타입을 float32로 변환
         else:
             raise ValueError("전처리를 지원하지 않는 모델 타입입니다.")
-
+        
     def predict(self, image_path, input_size=(640, 640)):
         """
         이미지를 입력받아 추론 결과 반환.
@@ -99,7 +99,7 @@ class MyFramework:
 
         if self.model_type == "pytorch":
             with torch.no_grad():
-                # 디바이스에 따라 float16 또는 float32 사용
+                # CPU에서는 float32만 사용하고, CUDA에서는 float16 사용
                 if self.device.type == "cuda":
                     input_data = input_data.to(torch.float16).to(self.device)
                 else:
