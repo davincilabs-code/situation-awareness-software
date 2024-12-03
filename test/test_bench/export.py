@@ -1,8 +1,3 @@
-#         # 압축 해제
-#         print("Extracting dataset...")
-#         with zipfile.ZipFile(zip_path, "r") as zip_ref:
-#             zip_ref.extractall()
-#         os.remove(zip_path)  # 압축 파일 삭제
 
 # download_and_extract(dataset_url, dataset_path)
 
