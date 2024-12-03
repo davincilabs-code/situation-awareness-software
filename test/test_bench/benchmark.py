@@ -1,12 +1,3 @@
- def prepare_image_onnx(image_path, input_size=(640, 640)):
-#     """ONNX 모델 입력 형식으로 이미지를 준비합니다."""
-#     img = Image.open(image_path).convert('RGB')  # 항상 RGB로 변환하여 3채널을 보장
-#     img = img.resize(input_size)                 # 모델 입력 크기로 리사이즈
-#     img = np.array(img, dtype=np.float32) / 255.0  # 정규화 (H, W, C)
-#     img = np.transpose(img, (2, 0, 1))           # (H, W, C) -> (C, H, W)
-#     img = np.expand_dims(img, axis=0)            # (1, 3, 640, 640) 형태로 만듦
-#     return img
-
 # def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx, image_paths, num_iterations=1):
 #     """각 모델의 추론 시간과 메모리 사용을 측정합니다."""
 #     tf_lite_16_times, tf_lite_32_times, onnx_times = [], [], []
