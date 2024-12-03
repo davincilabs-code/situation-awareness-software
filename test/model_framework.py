@@ -104,6 +104,8 @@ class MyFramework:
 
                 start_time = time.time()
                 output = self.model(input_data)
+                print(f"모델 데이터 타입: {next(self.model.parameters()).dtype}")
+                print(f"입력 데이터 타입: {input_data.dtype}")
                 inference_time = (time.time() - start_time) * 1000  # ms
                 print(f"PyTorch 추론 완료! 소요 시간: {inference_time:.2f} ms")
                 if isinstance(output, (tuple, list)):
