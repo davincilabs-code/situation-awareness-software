@@ -123,3 +123,5 @@ def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times,
     plt.close()
 
     print("추론 시간 및 메모리 사용량 그래프가 저장되었습니다.")
+
+def main():
