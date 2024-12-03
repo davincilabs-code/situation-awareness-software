@@ -1,8 +1,3 @@
-
-
-#     # TensorFlow Lite 해석기 초기화
-#     tf_lite_interpreter = tf.lite.Interpreter(model_path=str(tflite_path))
-#     tf_lite_interpreter.allocate_tensors()
     
 #     # ONNX 모델 로드 및 경로 설정
 #     onnx_path = Path(model_path).with_suffix('.onnx')
