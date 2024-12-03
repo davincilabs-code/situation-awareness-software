@@ -1,5 +1,3 @@
-#     print("\n=== 벤치마크 결과 ===")
-#     # 성능 측정 출력 (시간)
 #     if tf_lite_16_times:
 #         print(f"TensorFlow Lite Float16 평균 추론 시간: {mean(tf_lite_16_times[10:]) * 1000:.2f}ms")
 #         print(f"TensorFlow Lite Float16 표준 편차: {stdev(tf_lite_16_times[10:]) * 1000:.2f}ms")
