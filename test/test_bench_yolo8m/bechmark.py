@@ -85,3 +85,4 @@ def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx,
             for _ in range(num_iterations):
                 start_time = time.perf_counter()
                 model_onnx.run(None, {input_name: image})
+                onnx_times.append(time.perf_counter() - start_time)
