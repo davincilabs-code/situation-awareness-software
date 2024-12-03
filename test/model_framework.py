@@ -56,7 +56,6 @@ class MyFramework:
             else:
                 providers = ["CPUExecutionProvider"]
             self.session = ort.InferenceSession(str(self.model_path), providers=providers)
-            # print("사용된 프로바이더:", self.session.get_providers())
             print("ONNX 모델 로드 완료.")
         else:
             raise ValueError("지원되지 않는 파일 확장자입니다. ('pt', 'tflite', 'onnx' 중 선택)")
