@@ -99,7 +99,12 @@ class MyFramework:
 
         if self.model_type == "pytorch":
             with torch.no_grad():
-                input_data = input_data.to(torch.float16).to(self.device)
+                # 디바이스에 따라 float16 또는 float32 사용
+                if self.device.type == "cuda":
+                    input_data = input_data.to(torch.float16).to(self.device)
+                else:
+                    input_data = input_data.to(torch.float32).to(self.device)  # CPU에서는 float32 사용
+
                 start_time = time.time()
                 output = self.model(input_data)
                 inference_time = (time.time() - start_time) * 1000  # ms
