@@ -62,7 +62,7 @@ class MyFramework:
             else:
                 providers = ["CPUExecutionProvider"]
             self.session = ort.InferenceSession(str(self.model_path), providers=providers)
-            print("사용된 프로바이더:", self.session.get_providers())
+            # print("사용된 프로바이더:", self.session.get_providers())
             print("ONNX 모델 로드 완료.")
         else:
             raise ValueError("지원되지 않는 파일 확장자입니다. ('pt', 'tflite', 'onnx' 중 선택)")
@@ -107,8 +107,8 @@ class MyFramework:
                     input_data = input_data.to(torch.float16).to(self.device)  # GPU에서 실행 시 float16
                 else:
                     input_data = input_data.to(torch.float32).to(self.device)  # CPU에서 실행 시 float32
-                print(f"모델 데이터 타입: {next(self.model.parameters()).dtype}")
-                print(f"입력 데이터 타입: {input_data.dtype}")
+                # print(f"모델 데이터 타입: {next(self.model.parameters()).dtype}")
+                # print(f"입력 데이터 타입: {input_data.dtype}")
                 start_time = time.time()
                 output = self.model(input_data)
 
@@ -158,5 +158,5 @@ if __name__ == "__main__":
     output_tflite32 = model.predict("test.jpg", input_size=(640, 640))
 
     print("\n=== ONNX 모델 ===")
-    model = MyFramework("test.onnx", device="cuda")
+    model = MyFramework("test.onnx")
     output_onnx = model.predict("test.jpg", input_size=(640, 640))
