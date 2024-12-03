@@ -32,3 +32,5 @@ def load_interpreters():
     ort_sess = ort.InferenceSession(str(onnx_model_path))
 
     return tf_lite_interpreter_16, tf_lite_interpreter_32, ort_sess
+
+def prepare_image_tflite(image_path, input_size=(640, 640)):
