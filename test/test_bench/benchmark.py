@@ -1,11 +1,4 @@
-# # 모델 경로 설정
-# save_dir = Path("/home/jetson/Downloads/yolov/yolov8n/yolov8n_saved_model/")
-# tflite_float16_path = save_dir / "yolov8n_float16.tflite"
-# tflite_float32_path = save_dir / "yolov8n_float32.tflite"
-# onnx_model_path = "yolov8n.onnx"
 
-# # 데이터셋 경로 설정
-# dataset_path = "coco128/images/train2017"
 
 # def load_interpreters():
 #     """TensorFlow Lite와 ONNX 모델을 로드합니다."""
