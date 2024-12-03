@@ -1,11 +1,3 @@
-
-#     print("모델 로딩 중...")
-#     tf_lite_model, onnx_model = load_models(model_path)
-    
-#     # 모델이 로드되지 않은 경우 종료
-#     if tf_lite_model is None or onnx_model is None:
-#         print("모델 로드에 실패했습니다. 필요한 라이브러리가 모두 설치되었는지 확인하세요.")
-#         return
     
 #     print("벤치마크 시작...")
 #     tf_lite_times, onnx_times = benchmark_inference(tf_lite_model, onnx_model, image_paths)
