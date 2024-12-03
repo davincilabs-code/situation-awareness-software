@@ -43,3 +43,4 @@ def prepare_image_tflite(image_path, input_size=(640, 640)):
 def prepare_image_onnx(image_path, input_size=(640, 640)):
     img = Image.open(image_path).convert('RGB')  # 항상 RGB로 변환하여 3채널을 보장
     img = img.resize(input_size) 
+    mg = np.array(img, dtype=np.float32) / 255.0  # 정규화 (H, W, C)
