@@ -41,4 +41,5 @@ def prepare_image_tflite(image_path, input_size=(640, 640)):
     return img
 
 def prepare_image_onnx(image_path, input_size=(640, 640)):
-    img = Image.open(image_path).convert('RGB')
+    img = Image.open(image_path).convert('RGB')  # 항상 RGB로 변환하여 3채널을 보장
+    img = img.resize(input_size) 
