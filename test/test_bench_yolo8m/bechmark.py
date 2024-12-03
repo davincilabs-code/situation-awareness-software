@@ -30,3 +30,5 @@ def load_interpreters():
     tf_lite_interpreter_32.allocate_tensors()
 
     ort_sess = ort.InferenceSession(str(onnx_model_path))
+
+    return tf_lite_interpreter_16, tf_lite_interpreter_32, ort_sess
