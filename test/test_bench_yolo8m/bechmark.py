@@ -99,3 +99,6 @@ def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times,
     avg_memories = [mean(tf_lite_16_memories[10:]) / 1024, mean(tf_lite_32_memories[10:]) / 1024, mean(onnx_memories[10:]) / 1024]
 
     colors = ['skyblue', 'salmon', 'lightgreen']  # 색상 정의
+
+    plt.figure(figsize=(10, 6))
+    bars = plt.bar(model_names, avg_times, yerr=std_times, capsize=5, color=colors)
