@@ -41,3 +41,4 @@ def prepare_image_tflite(image_path, input_size=(640, 640)):
     return img
 
 def prepare_image_onnx(image_path, input_size=(640, 640)):
+    img = Image.open(image_path).convert('RGB')
