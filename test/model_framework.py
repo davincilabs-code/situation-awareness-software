@@ -157,5 +157,5 @@ if __name__ == "__main__":
     output_tflite32 = model.predict("test.jpg", input_size=(640, 640))
 
     print("\n=== ONNX 모델 ===")
-    model = MyFramework("test.onnx")
+    model = MyFramework("test.onnx", device="cuda")
     output_onnx = model.predict("test.jpg", input_size=(640, 640))
