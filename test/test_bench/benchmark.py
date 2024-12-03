@@ -1,12 +1,3 @@
-  
-#     # 벤치마크 그래프 저장
-#     save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times, 
-#                           tf_lite_16_memories, tf_lite_32_memories, onnx_memories)
-
-# if __name__ == "__main__":
-#     main()
-
-
 import time
 import os
 import numpy as np
