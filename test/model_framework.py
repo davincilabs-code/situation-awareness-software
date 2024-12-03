@@ -41,6 +41,9 @@ class MyFramework:
             # print("체크포인트 키:", checkpoint.keys())
             self.model = checkpoint['model'].to(self.device)  # 모델 객체 디바이스로 이동
             self.model.eval()
+
+            if self.device.type == "cpu":
+                self.model.float()  # 모델의 모든 파라미터를 float32로 변환
             print("PyTorch 모델 로드 완료.")
 
         elif file_extension == ".tflite":
