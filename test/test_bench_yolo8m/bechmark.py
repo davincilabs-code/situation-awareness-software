@@ -95,3 +95,4 @@ def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times,
                           tf_lite_16_memories, tf_lite_32_memories, onnx_memories):
     model_names = ["TFLite Float16", "TFLite Float32", "ONNX"]
     avg_times = [mean(tf_lite_16_times[10:]) * 1000, mean(tf_lite_32_times[10:]) * 1000, mean(onnx_times[10:]) * 1000]
+    std_times = [stdev(tf_lite_16_times[10:]) * 1000, stdev(tf_lite_32_times[10:]) * 1000, stdev(onnx_times[10:]) * 1000]
