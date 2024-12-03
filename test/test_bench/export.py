@@ -1,7 +1,3 @@
-# download_and_extract(dataset_url, dataset_path)
-
-# # 모델 경로 설정 (YOLOv8n.pt 파일의 경로로 변경하세요)
-# model_path = "yolov8n.pt"
 
 # def load_models(model_path):
 #     """TensorFlow Lite와 ONNX 모델을 로드합니다."""
