@@ -1,6 +1,3 @@
-   
-#     return tf_lite_16_times, tf_lite_32_times, onnx_times, tf_lite_16_memories, tf_lite_32_memories, onnx_memories
-
 # def save_benchmark_graphs(tf_lite_16_times, tf_lite_32_times, onnx_times, 
 #                           tf_lite_16_memories, tf_lite_32_memories, onnx_memories):
 #     # 모델 명칭과 데이터를 정리
