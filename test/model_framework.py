@@ -7,7 +7,6 @@ import torch
 import torch.nn as nn
 from pathlib import Path
 from PIL import Image
-import logging
 
 class MyFramework:
     def __init__(self, model_path, device="cpu"):
