@@ -1,9 +1,4 @@
-#     # 범례를 오른쪽 중앙에 추가
-#     plt.legend(bars, model_names, loc='center right', title="Model Type")
-#     plt.savefig("inference_time_benchmark.png")
-#     plt.close()
-
-#     # 메모리 사용량 그래프
+     # 메모리 사용량 그래프
 #     plt.figure(figsize=(10, 6))
 #     bars = plt.bar(model_names, avg_memories, color=colors)
 #     plt.ylabel("Average Memory Usage (KB)")
