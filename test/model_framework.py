@@ -99,11 +99,11 @@ class MyFramework:
 
         if self.model_type == "pytorch":
             with torch.no_grad():
-                # CPU에서는 float32만 사용하고, CUDA에서는 float16 사용
-                if self.device.type == "cuda":
+                # CPU에서는 항상 float32 사용, CUDA에서는 float16 지원 여부 확인
+                if self.device.type == "cuda" and next(self.model.parameters()).dtype == torch.float16:
                     input_data = input_data.to(torch.float16).to(self.device)
                 else:
-                    input_data = input_data.to(torch.float32).to(self.device)  # CPU에서는 float32 사용
+                    input_data = input_data.to(torch.float32).to(self.device)
 
                 start_time = time.time()
                 output = self.model(input_data)
@@ -136,6 +136,7 @@ class MyFramework:
 
         else:
             raise ValueError("추론을 지원하지 않는 모델 타입입니다.")
+
 
 # 사용 예시
 if __name__ == "__main__":
