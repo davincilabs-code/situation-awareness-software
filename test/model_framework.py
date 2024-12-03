@@ -99,8 +99,10 @@ class MyFramework:
 
         if self.model_type == "pytorch":
             with torch.no_grad():
-                # YOLOv8 모델은 기본적으로 float16을 사용
-                input_data = input_data.to(torch.float16).to(self.device)  # float32에서 float16으로 변환
+                if self.device.type == "cuda":
+                    input_data = input_data.to(torch.float16).to(self.device)  # GPU에서 실행 시 float16
+                else:
+                    input_data = input_data.to(torch.float32).to(self.device)  # CPU에서 실행 시 float32
                 print(f"모델 데이터 타입: {next(self.model.parameters()).dtype}")
                 print(f"입력 데이터 타입: {input_data.dtype}")
                 start_time = time.time()
