@@ -47,3 +47,5 @@ def prepare_image_onnx(image_path, input_size=(640, 640)):
     img = np.transpose(img, (2, 0, 1))           # (H, W, C) -> (C, H, W)
     img = np.expand_dims(img, axis=0) 
     return img
+
+def benchmark_inference_extended(model_tf_lite_16, model_tf_lite_32, model_onnx, image_paths, num_iterations=1):
