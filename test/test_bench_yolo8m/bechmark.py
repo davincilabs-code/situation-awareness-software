@@ -150,3 +150,5 @@ def main():
 
     if tf_lite_16_memories:
         print(f"TensorFlow Lite Float16 평균 메모리 사용량: {mean(tf_lite_16_memories[10:]) / 1024:.2f} KB")
+    if tf_lite_32_memories:
+        print(f"TensorFlow Lite Float32 평균 메모리 사용량: {mean(tf_lite_32_memories[10:]) / 1024:.2f} KB")
