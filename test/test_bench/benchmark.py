@@ -36,12 +36,6 @@ def load_models():
 
     ort_sess = ort.InferenceSession(str(onnx_model_path))  # providers 매개변수 제거
 
-    # # ONNX 모델 로드
-    # ort_sess = ort.InferenceSession(
-    # str(onnx_model_path),
-    # providers=providers
-    # )
-
     return yolo_model, tf_lite_interpreter_16, tf_lite_interpreter_32, ort_sess
 
 def prepare_image(image_path, input_size=(640, 640)):
