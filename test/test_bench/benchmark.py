@@ -1,9 +1,3 @@
-# # main 함수 수정
-# def main():
-#     # 이미지 파일 목록 생성
-#     image_folder = Path(dataset_path)
-#     image_paths = [str(p) for p in image_folder.glob("*.jpg")]
-    
 #     print("모델 로딩 중...")
 #     tf_lite_model_16, tf_lite_model_32, onnx_model = load_interpreters()
     
