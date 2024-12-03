@@ -99,7 +99,7 @@ class MyFramework:
 
         if self.model_type == "pytorch":
             with torch.no_grad():
-                # 입력 데이터를 항상 float32로 설정
+                # YOLOv8 모델은 기본적으로 float32를 사용
                 input_data = input_data.to(torch.float32).to(self.device)
 
                 start_time = time.time()
