@@ -66,17 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-#     # TensorFlow Lite float32 모델 내보내기
-#     yolo_model.export(format='tflite')
-#     default_tflite_32_path = Path(model_path).with_suffix('.tflite')
-#     target_tflite_32_path = save_dir / "yolov8n_float32.tflite"
-#     if default_tflite_32_path.exists():
-#         save_dir.mkdir(parents=True, exist_ok=True)
-#         shutil.move(str(default_tflite_32_path), str(target_tflite_32_path))
-#     else:
-#         print("Error: TFLite float32 model export failed.")
-#         return None, None, None
 
 #     # TensorFlow Lite float16 양자화
 #     converter = lite.TFLiteConverter.from_saved_model(str(target_tflite_32_path))
