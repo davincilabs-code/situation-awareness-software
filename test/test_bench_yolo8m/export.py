@@ -162,6 +162,7 @@ def load_models(model_path):
 
 def prepare_image(image_path, input_size=(640, 640)):
     img = Image.open(image_path)
+    img = img.resize(input_size)
 # import time
 # import os
 # import numpy as np
