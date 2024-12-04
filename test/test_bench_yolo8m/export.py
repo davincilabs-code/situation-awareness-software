@@ -185,6 +185,7 @@ def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=1
         for image_path in tqdm(image_paths, desc="ONNX"):
             image = prepare_image(image_path)
             for _ in range(num_iterations):
+                
 # import time
 # import os
 # import numpy as np
