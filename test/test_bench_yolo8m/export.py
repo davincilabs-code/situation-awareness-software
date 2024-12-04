@@ -66,17 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-# def download_and_extract(url, dest_path):
-#     zip_path = "coco128.zip"
-#     if not os.path.exists(dest_path):
-#         print("Downloading dataset...")
-#         response = requests.get(url)
-#         with open(zip_path, "wb") as f:
-#             f.write(response.content)
-#         print("Extracting dataset...")
-#         with zipfile.ZipFile(zip_path, "r") as zip_ref:
-#             zip_ref.extractall()
-#         os.remove(zip_path)
 
 # download_and_extract(dataset_url, dataset_path)
 
