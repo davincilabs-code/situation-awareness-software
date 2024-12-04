@@ -66,17 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-#     # ONNX 모델 내보내기 및 경로 설정
-#     yolo_model.export(format='onnx')
-#     default_onnx_path = Path(model_path).with_suffix('.onnx')
-#     target_onnx_path = save_dir / "yolov8n.onnx"
-#     if default_onnx_path.exists():
-#         shutil.move(str(default_onnx_path), str(target_onnx_path))
-#     else:
-#         print("Error: ONNX model export failed.")
-#         return None, None, None
-
-#     ort_sess = ort.InferenceSession(str(target_onnx_path), providers=['CUDAExecutionProvider'])
     
 #     return tf_lite_interpreter_16, tf_lite_interpreter_32, ort_sess
 
