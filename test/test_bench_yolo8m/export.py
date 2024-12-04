@@ -170,6 +170,8 @@ def prepare_image(image_path, input_size=(640, 640)):
 def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=100):
     tf_lite_times = []
     if model_tf_lite:
+        for image_path in tqdm(image_paths, desc="TensorFlow Lite"):
+            image = prepare_image(image_path)
 # import time
 # import os
 # import numpy as np
