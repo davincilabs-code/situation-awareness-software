@@ -126,6 +126,8 @@ def download_and_extract(url, dest_path):
     if not os.path.exists(dest_path):
         print("Downloading dataset...")
         response = requests.get(url)
+        with open(zip_path, "wb") as f:
+            f.write(response.content)
 
 # import time
 # import os
