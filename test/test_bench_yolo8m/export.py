@@ -153,6 +153,8 @@ def load_models(model_path):
     onnx_path = Path(model_path).with_suffix('.onnx')
     YOLO(model_path).export(format='onnx')
     if not onnx_path.exists():
+        print(f"Error: {onnx_path} not found. Please check the export process.")
+        return None, None
 # import time
 # import os
 # import numpy as np
