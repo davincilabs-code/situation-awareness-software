@@ -121,6 +121,8 @@ import zipfile
 dataset_url = "https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip"
 dataset_path = "coco128"
 
+def download_and_extract(url, dest_path):
+
 # import time
 # import os
 # import numpy as np
