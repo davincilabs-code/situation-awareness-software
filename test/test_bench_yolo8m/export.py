@@ -66,9 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# def benchmark_inference(model_tf_lite_16, model_tf_lite_32, model_onnx, image_paths, num_iterations=100):
-#     tf_lite_16_times, tf_lite_32_times, onnx_times = [], [], []
     
 #     if model_tf_lite_16:
 #         for image_path in tqdm(image_paths, desc="TensorFlow Lite Float16"):
