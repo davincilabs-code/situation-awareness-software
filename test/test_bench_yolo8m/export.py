@@ -67,12 +67,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-# download_and_extract(dataset_url, dataset_path)
-
-# # 모델 경로 설정 및 저장 디렉토리 지정
-# model_path = "yolov8n.pt"
-# save_dir = Path("C:/Users/USER/Desktop/2024/프로젝트/yolov/yolov8n_saved_model")
-
 # def load_models(model_path):
 #     """TensorFlow Lite (float16, float32)와 ONNX 모델을 로드합니다."""
 #     yolo_model = YOLO(model_path)
