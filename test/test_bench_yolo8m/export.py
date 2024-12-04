@@ -194,6 +194,9 @@ def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=1
 def main():
     image_folder = Path(dataset_path) / "images" / "train"
     image_paths = [str(p) for p in image_folder.glob("*.jpg")]
+
+    print("모델 로딩 중...")
+    tf_lite_model, onnx_model = load_models(model_path)
 # import time
 # import os
 # import numpy as np
