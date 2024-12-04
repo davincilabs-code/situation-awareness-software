@@ -181,6 +181,7 @@ def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=1
 
     onnx_times = []
     if model_onnx:
+        input_name = model_onnx.get_inputs()[0].name
 # import time
 # import os
 # import numpy as np
