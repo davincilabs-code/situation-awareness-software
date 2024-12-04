@@ -1,16 +1,4 @@
-# def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=100):
-#     """추론 성능을 벤치마크합니다."""
-#     # TensorFlow Lite 벤치마크
-#     tf_lite_times = []
-#     for image_path in tqdm(image_paths, desc="TensorFlow Lite"):
-#         image = prepare_image(image_path)
-#         for _ in range(num_iterations):
-#             start_time = time.perf_counter()
-#             model_tf_lite.set_tensor(model_tf_lite.get_input_details()[0]['index'], image)
-#             model_tf_lite.invoke()
-#             _ = model_tf_lite.get_tensor(model_tf_lite.get_output_details()[0]['index'])
-#             tf_lite_times.append(time.perf_counter() - start_time)
-    
+   
 #     # ONNX 벤치마크
 #     onnx_times = []
 #     input_name = model_onnx.get_inputs()[0].name
