@@ -146,7 +146,9 @@ def load_models(model_path):
     if not tflite_path.exists():
         print(f"Error: {tflite_path} not found. Please check the export process.")
         return None, None
-
+    
+    tf_lite_interpreter = tf.lite.Interpreter(model_path=str(tflite_path))
+    tf_lite_interpreter.allocate_tensors()
 # import time
 # import os
 # import numpy as np
