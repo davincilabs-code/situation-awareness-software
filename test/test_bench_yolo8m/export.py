@@ -66,10 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# def load_models(model_path):
-#     """TensorFlow Lite (float16, float32)와 ONNX 모델을 로드합니다."""
-#     yolo_model = YOLO(model_path)
     
 #     # TensorFlow Lite float32 모델 내보내기
 #     yolo_model.export(format='tflite')
