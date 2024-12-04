@@ -1,19 +1,3 @@
-# def load_models(model_path):
-#     """TensorFlow Lite와 ONNX 모델을 로드합니다."""
-#     # TensorFlow Lite 모델 로드
-#     tf_lite_model = YOLO(model_path)
-#     tf_lite_model.export(format='tflite')
-#     tflite_path = str(Path(model_path).with_suffix('.tflite'))
-#     tf_lite_interpreter = tf.lite.Interpreter(model_path=tflite_path)
-#     tf_lite_interpreter.allocate_tensors()
-    
-#     # ONNX 모델 로드
-#     onnx_path = str(Path(model_path).with_suffix('.onnx'))
-#     YOLO(model_path).export(format='onnx')
-#     ort_sess = ort.InferenceSession(onnx_path, providers=['CUDAExecutionProvider'])
-    
-#     return tf_lite_interpreter, ort_sess
-
 # def prepare_image(image_path, input_size=(640, 640)):
 #     """이미지를 전처리합니다."""
 #     img = Image.open(image_path)
