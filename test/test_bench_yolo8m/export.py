@@ -155,6 +155,8 @@ def load_models(model_path):
     if not onnx_path.exists():
         print(f"Error: {onnx_path} not found. Please check the export process.")
         return None, None
+    
+    ort_sess = ort.InferenceSession(str(onnx_path), providers=['CUDAExecutionProvider'])
 # import time
 # import os
 # import numpy as np
