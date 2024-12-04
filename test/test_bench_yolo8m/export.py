@@ -67,16 +67,6 @@ def main():
 if __name__ == "__main__":
     main()
     
-#     if model_tf_lite_16:
-#         for image_path in tqdm(image_paths, desc="TensorFlow Lite Float16"):
-#             image = prepare_image(image_path)
-#             for _ in range(num_iterations):
-#                 start_time = time.perf_counter()
-#                 model_tf_lite_16.set_tensor(model_tf_lite_16.get_input_details()[0]['index'], image)
-#                 model_tf_lite_16.invoke()
-#                 _ = model_tf_lite_16.get_tensor(model_tf_lite_16.get_output_details()[0]['index'])
-#                 tf_lite_16_times.append(time.perf_counter() - start_time)
-    
 #     if model_tf_lite_32:
 #         for image_path in tqdm(image_paths, desc="TensorFlow Lite Float32"):
 #             image = prepare_image(image_path)
