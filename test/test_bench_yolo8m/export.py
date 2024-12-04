@@ -67,10 +67,6 @@ def main():
 if __name__ == "__main__":
     main()
     
-#     print("벤치마크 시작...")
-#     tf_lite_16_times, tf_lite_32_times, onnx_times = benchmark_inference(
-#         tf_lite_model_16, tf_lite_model_32, onnx_model, image_paths)
-    
 #     print("\n=== 벤치마크 결과 ===")
 #     if tf_lite_16_times:
 #         print(f"TensorFlow Lite Float16 평균 추론 시간: {np.mean(tf_lite_16_times[10:]) * 1000:.2f}ms")
