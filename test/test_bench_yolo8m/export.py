@@ -67,10 +67,6 @@ def main():
 if __name__ == "__main__":
     main()
     
-#     if tf_lite_model_16 is None or tf_lite_model_32 is None or onnx_model is None:
-#         print("모델 로드에 실패했습니다.")
-#         return
-    
 #     print("벤치마크 시작...")
 #     tf_lite_16_times, tf_lite_32_times, onnx_times = benchmark_inference(
 #         tf_lite_model_16, tf_lite_model_32, onnx_model, image_paths)
