@@ -167,29 +167,29 @@ def prepare_image(image_path, input_size=(640, 640)):
     img = np.expand_dims(img, axis=0).astype(np.float32)
     return img
 
-def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=100):
-    tf_lite_times = []
-    if model_tf_lite:
-        for image_path in tqdm(image_paths, desc="TensorFlow Lite"):
-            image = prepare_image(image_path)
-            for _ in range(num_iterations):
-                start_time = time.perf_counter()
-                model_tf_lite.set_tensor(model_tf_lite.get_input_details()[0]['index'], image)
-                model_tf_lite.invoke()
-                _ = model_tf_lite.get_tensor(model_tf_lite.get_output_details()[0]['index'])
-                tf_lite_times.append(time.perf_counter() - start_time)
+# def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=100):
+#     tf_lite_times = []
+#     if model_tf_lite:
+#         for image_path in tqdm(image_paths, desc="TensorFlow Lite"):
+#             image = prepare_image(image_path)
+#             for _ in range(num_iterations):
+#                 start_time = time.perf_counter()
+#                 model_tf_lite.set_tensor(model_tf_lite.get_input_details()[0]['index'], image)
+#                 model_tf_lite.invoke()
+#                 _ = model_tf_lite.get_tensor(model_tf_lite.get_output_details()[0]['index'])
+#                 tf_lite_times.append(time.perf_counter() - start_time)
 
-    onnx_times = []
-    if model_onnx:
-        input_name = model_onnx.get_inputs()[0].name
-        for image_path in tqdm(image_paths, desc="ONNX"):
-            image = prepare_image(image_path)
-            for _ in range(num_iterations):
-                start_time = time.perf_counter()
-                _ = model_onnx.run(None, {input_name: image})
-                onnx_times.append(time.perf_counter() - start_time)
+#     onnx_times = []
+#     if model_onnx:
+#         input_name = model_onnx.get_inputs()[0].name
+#         for image_path in tqdm(image_paths, desc="ONNX"):
+#             image = prepare_image(image_path)
+#             for _ in range(num_iterations):
+#                 start_time = time.perf_counter()
+#                 _ = model_onnx.run(None, {input_name: image})
+#                 onnx_times.append(time.perf_counter() - start_time)
 
-    return tf_lite_times, onnx_times
+#     return tf_lite_times, onnx_times
 
 def main():
     image_folder = Path(dataset_path) / "images" / "train"
