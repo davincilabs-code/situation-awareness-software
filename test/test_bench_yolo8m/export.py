@@ -137,6 +137,8 @@ download_and_extract(dataset_url, dataset_path)
 
 model_path = "yolov8m.pt"
 
+def load_models(model_path):
+
 # import time
 # import os
 # import numpy as np
