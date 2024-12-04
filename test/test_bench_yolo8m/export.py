@@ -66,14 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-#     # TensorFlow Lite 해석기 초기화
-#     tf_lite_interpreter_16 = tf.lite.Interpreter(model_path=str(target_tflite_16_path))
-#     tf_lite_interpreter_16.allocate_tensors()
-#     tf_lite_interpreter_32 = tf.lite.Interpreter(model_path=str(target_tflite_32_path))
-#     tf_lite_interpreter_32.allocate_tensors()
-    
 #     # ONNX 모델 내보내기 및 경로 설정
 #     yolo_model.export(format='onnx')
 #     default_onnx_path = Path(model_path).with_suffix('.onnx')
