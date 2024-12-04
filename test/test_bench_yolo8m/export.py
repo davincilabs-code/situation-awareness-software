@@ -66,8 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-#     return tf_lite_interpreter_16, tf_lite_interpreter_32, ort_sess
 
 # def prepare_image(image_path, input_size=(640, 640)):
 #     img = Image.open(image_path)
