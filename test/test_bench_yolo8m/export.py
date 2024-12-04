@@ -1,11 +1,4 @@
-# def main():
-#     # 데이터셋 이미지 경로 리스트 생성
-#     image_folder = Path(dataset_path) / "images" / "train"
-#     image_paths = [str(p) for p in image_folder.glob("*.jpg")]
-    
-#     print("모델 로딩 중...")
-#     tf_lite_model, onnx_model = load_models(model_path)
-    
+   
 #     print("벤치마크 시작...")
 #     tf_lite_times, onnx_times = benchmark_inference(tf_lite_model, onnx_model, image_paths)
     
