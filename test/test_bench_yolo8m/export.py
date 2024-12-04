@@ -204,6 +204,8 @@ def main():
     
     print("벤치마크 시작...")
     tf_lite_times, onnx_times = benchmark_inference(tf_lite_model, onnx_model, image_paths)
+
+    print("\n=== 벤치마크 결과 ===")
 # import time
 # import os
 # import numpy as np
