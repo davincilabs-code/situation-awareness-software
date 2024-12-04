@@ -128,6 +128,7 @@ def download_and_extract(url, dest_path):
         response = requests.get(url)
         with open(zip_path, "wb") as f:
             f.write(response.content)
+        print("Extracting dataset...")
 
 # import time
 # import os
