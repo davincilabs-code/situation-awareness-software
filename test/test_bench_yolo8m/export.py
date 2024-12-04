@@ -66,11 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# # 데이터셋 다운로드 및 경로 설정
-# dataset_url = "https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip"
-# dataset_path = "coco128"
-
 # def download_and_extract(url, dest_path):
 #     zip_path = "coco128.zip"
 #     if not os.path.exists(dest_path):
