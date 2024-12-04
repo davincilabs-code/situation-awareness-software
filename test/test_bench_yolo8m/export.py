@@ -67,9 +67,6 @@ def main():
 if __name__ == "__main__":
     main()
     
-#     print("모델 로딩 중...")
-#     tf_lite_model_16, tf_lite_model_32, onnx_model = load_models(model_path)
-    
 #     if tf_lite_model_16 is None or tf_lite_model_32 is None or onnx_model is None:
 #         print("모델 로드에 실패했습니다.")
 #         return
