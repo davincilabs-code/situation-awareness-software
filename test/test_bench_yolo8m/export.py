@@ -157,6 +157,8 @@ def load_models(model_path):
         return None, None
     
     ort_sess = ort.InferenceSession(str(onnx_path), providers=['CUDAExecutionProvider'])
+
+    return tf_lite_interpreter, ort_sess
 # import time
 # import os
 # import numpy as np
