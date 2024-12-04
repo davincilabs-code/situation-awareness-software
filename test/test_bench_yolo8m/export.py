@@ -167,8 +167,6 @@ def prepare_image(image_path, input_size=(640, 640)):
     img = np.expand_dims(img, axis=0).astype(np.float32)
     return img
 
-#     return tf_lite_times, onnx_times
-
 def main():
     image_folder = Path(dataset_path) / "images" / "train"
     image_paths = [str(p) for p in image_folder.glob("*.jpg")]
