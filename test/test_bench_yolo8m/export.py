@@ -66,12 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#     # TensorFlow Lite float16 양자화
-#     converter = lite.TFLiteConverter.from_saved_model(str(target_tflite_32_path))
-#     converter.optimizations = [tf.lite.Optimize.DEFAULT]
-#     converter.target_spec.supported_types = [tf.float16]
-#     tflite_float16_model = converter.convert()
     
 #     # float16 모델 저장
 #     target_tflite_16_path = save_dir / "yolov8n_float16.tflite"
