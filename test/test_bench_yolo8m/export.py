@@ -209,6 +209,7 @@ def main():
     if tf_lite_times:
         print(f"TensorFlow Lite 평균 추론 시간: {np.mean(tf_lite_times[10:]) * 1000:.2f}ms")
         print(f"TensorFlow Lite 표준 편차: {np.std(tf_lite_times[10:]) * 1000:.2f}ms")
+    if onnx_times:
 # import time
 # import os
 # import numpy as np
