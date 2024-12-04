@@ -192,6 +192,8 @@ def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=1
     return tf_lite_times, onnx_times
 
 def main():
+    image_folder = Path(dataset_path) / "images" / "train"
+    image_paths = [str(p) for p in image_folder.glob("*.jpg")]
 # import time
 # import os
 # import numpy as np
