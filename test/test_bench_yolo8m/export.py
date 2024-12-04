@@ -144,6 +144,9 @@ def load_models(model_path):
     tflite_path = Path(model_path).with_suffix('.tflite')
 
     if not tflite_path.exists():
+        print(f"Error: {tflite_path} not found. Please check the export process.")
+        return None, None
+
 # import time
 # import os
 # import numpy as np
