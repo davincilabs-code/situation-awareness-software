@@ -131,6 +131,7 @@ def download_and_extract(url, dest_path):
         print("Extracting dataset...")
         with zipfile.ZipFile(zip_path, "r") as zip_ref:
             zip_ref.extractall()
+        os.remove(zip_path)  # 압축 파일 삭제
 
 # import time
 # import os
