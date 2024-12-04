@@ -167,8 +167,6 @@ def prepare_image(image_path, input_size=(640, 640)):
     img = np.expand_dims(img, axis=0).astype(np.float32)
     return img
 
-#     onnx_times = []
-#     if model_onnx:
 #         input_name = model_onnx.get_inputs()[0].name
 #         for image_path in tqdm(image_paths, desc="ONNX"):
 #             image = prepare_image(image_path)
