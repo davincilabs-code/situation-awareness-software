@@ -166,7 +166,6 @@ def prepare_image(image_path, input_size=(640, 640)):
     img = np.array(img) / 255.0
     img = np.expand_dims(img, axis=0).astype(np.float32)
     return img
-#                 tf_lite_times.append(time.perf_counter() - start_time)
 
 #     onnx_times = []
 #     if model_onnx:
