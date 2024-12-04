@@ -149,6 +149,9 @@ def load_models(model_path):
     
     tf_lite_interpreter = tf.lite.Interpreter(model_path=str(tflite_path))
     tf_lite_interpreter.allocate_tensors()
+
+    onnx_path = Path(model_path).with_suffix('.onnx')
+    YOLO(model_path).export(format='onnx')
 # import time
 # import os
 # import numpy as np
