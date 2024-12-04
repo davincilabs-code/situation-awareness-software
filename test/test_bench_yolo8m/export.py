@@ -124,6 +124,8 @@ dataset_path = "coco128"
 def download_and_extract(url, dest_path):
     zip_path = "coco128.zip"
     if not os.path.exists(dest_path):
+        print("Downloading dataset...")
+        response = requests.get(url)
 
 # import time
 # import os
