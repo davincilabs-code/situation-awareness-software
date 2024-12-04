@@ -199,6 +199,8 @@ def main():
     tf_lite_model, onnx_model = load_models(model_path)
 
     if tf_lite_model is None or onnx_model is None:
+        print("모델 로드에 실패했습니다. 필요한 라이브러리가 모두 설치되었는지 확인하세요.")
+        return
 # import time
 # import os
 # import numpy as np
