@@ -133,6 +133,8 @@ def download_and_extract(url, dest_path):
             zip_ref.extractall()
         os.remove(zip_path)  # 압축 파일 삭제
 
+download_and_extract(dataset_url, dataset_path)
+
 # import time
 # import os
 # import numpy as np
