@@ -215,6 +215,8 @@ def main():
     if tf_lite_times and onnx_times:
         print(f"ONNX vs TF Lite 속도 비율: {np.mean(tf_lite_times[10:]) / np.mean(onnx_times[10:]):.2f}x")
 
+if __name__ == "__main__":
+    main()
 
 # import time
 # import os
