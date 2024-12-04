@@ -197,6 +197,8 @@ def main():
 
     print("모델 로딩 중...")
     tf_lite_model, onnx_model = load_models(model_path)
+
+    if tf_lite_model is None or onnx_model is None:
 # import time
 # import os
 # import numpy as np
