@@ -1,18 +1,3 @@
-   
-#     print("벤치마크 시작...")
-#     tf_lite_times, onnx_times = benchmark_inference(tf_lite_model, onnx_model, image_paths)
-    
-#     # 결과 출력
-#     print("\n=== 벤치마크 결과 ===")
-#     print(f"TensorFlow Lite 평균 추론 시간: {np.mean(tf_lite_times[10:]) * 1000:.2f}ms")
-#     print(f"TensorFlow Lite 표준 편차: {np.std(tf_lite_times[10:]) * 1000:.2f}ms")
-#     print(f"ONNX 평균 추론 시간: {np.mean(onnx_times[10:]) * 1000:.2f}ms")
-#     print(f"ONNX 표준 편차: {np.std(onnx_times[10:]) * 1000:.2f}ms")
-#     print(f"ONNX vs TF Lite 속도 비율: {np.mean(tf_lite_times[10:]) / np.mean(onnx_times[10:]):.2f}x")
-
-# if __name__ == "__main__":
-#     main()
-
 import time
 import os
 import numpy as np
