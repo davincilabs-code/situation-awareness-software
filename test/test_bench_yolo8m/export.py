@@ -66,12 +66,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-#     if tf_lite_32_times:
-#         print(f"TensorFlow Lite Float32 평균 추론 시간: {np.mean(tf_lite_32_times[10:]) * 1000:.2f}ms")
-#         print(f"TensorFlow Lite Float32 표준 편차: {np.std(tf_lite_32_times[10:]) * 1000:.2f}ms")
-#     if onnx_times:
-#         print(f"ONNX 평균 추론 시간: {np.mean(onnx_times[10:]) * 1000:.2f}ms")
-#         print(f"ONNX 표준 편차: {np.std(onnx_times[10:]) * 1000:.2f}ms")
-
-# if __name__ == "__main__":
-#     main()
