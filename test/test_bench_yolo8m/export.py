@@ -66,11 +66,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-#     print("\n=== 벤치마크 결과 ===")
-#     if tf_lite_16_times:
-#         print(f"TensorFlow Lite Float16 평균 추론 시간: {np.mean(tf_lite_16_times[10:]) * 1000:.2f}ms")
-#         print(f"TensorFlow Lite Float16 표준 편차: {np.std(tf_lite_16_times[10:]) * 1000:.2f}ms")
 #     if tf_lite_32_times:
 #         print(f"TensorFlow Lite Float32 평균 추론 시간: {np.mean(tf_lite_32_times[10:]) * 1000:.2f}ms")
 #         print(f"TensorFlow Lite Float32 표준 편차: {np.std(tf_lite_32_times[10:]) * 1000:.2f}ms")
