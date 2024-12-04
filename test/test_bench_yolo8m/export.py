@@ -166,8 +166,6 @@ def prepare_image(image_path, input_size=(640, 640)):
     img = np.array(img) / 255.0
     img = np.expand_dims(img, axis=0).astype(np.float32)
     return img
-
-# def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=100):
 #     tf_lite_times = []
 #     if model_tf_lite:
 #         for image_path in tqdm(image_paths, desc="TensorFlow Lite"):
