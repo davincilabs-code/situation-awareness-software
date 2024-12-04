@@ -180,6 +180,7 @@ def benchmark_inference(model_tf_lite, model_onnx, image_paths, num_iterations=1
                 tf_lite_times.append(time.perf_counter() - start_time)
 
     onnx_times = []
+    if model_onnx:
 # import time
 # import os
 # import numpy as np
