@@ -159,6 +159,8 @@ def load_models(model_path):
     ort_sess = ort.InferenceSession(str(onnx_path), providers=['CUDAExecutionProvider'])
 
     return tf_lite_interpreter, ort_sess
+
+def prepare_image(image_path, input_size=(640, 640)):
 # import time
 # import os
 # import numpy as np
