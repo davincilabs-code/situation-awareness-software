@@ -129,6 +129,8 @@ def download_and_extract(url, dest_path):
         with open(zip_path, "wb") as f:
             f.write(response.content)
         print("Extracting dataset...")
+        with zipfile.ZipFile(zip_path, "r") as zip_ref:
+            zip_ref.extractall()
 
 # import time
 # import os
