@@ -161,6 +161,7 @@ def load_models(model_path):
     return tf_lite_interpreter, ort_sess
 
 def prepare_image(image_path, input_size=(640, 640)):
+    img = Image.open(image_path)
 # import time
 # import os
 # import numpy as np
