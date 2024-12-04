@@ -1,16 +1,3 @@
-   
-#     # ONNX 벤치마크
-#     onnx_times = []
-#     input_name = model_onnx.get_inputs()[0].name
-#     for image_path in tqdm(image_paths, desc="ONNX"):
-#         image = prepare_image(image_path)
-#         for _ in range(num_iterations):
-#             start_time = time.perf_counter()
-#             _ = model_onnx.run(None, {input_name: image})
-#             onnx_times.append(time.perf_counter() - start_time)
-    
-#     return tf_lite_times, onnx_times
-
 # def main():
 #     # 데이터셋 이미지 경로 리스트 생성
 #     image_folder = Path(dataset_path) / "images" / "train"
