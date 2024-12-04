@@ -66,11 +66,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-#     # float16 모델 저장
-#     target_tflite_16_path = save_dir / "yolov8n_float16.tflite"
-#     with open(target_tflite_16_path, "wb") as f:
-#         f.write(tflite_float16_model)
+
 
 #     # TensorFlow Lite 해석기 초기화
 #     tf_lite_interpreter_16 = tf.lite.Interpreter(model_path=str(target_tflite_16_path))
